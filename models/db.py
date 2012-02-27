@@ -15,9 +15,9 @@ from gluon.tools import Auth
 auth = Auth(db, hmac_key=Auth.get_or_create_key())
 
 auth.settings.extra_fields['auth_user']= [
-        Field('address'),
+        Field('address', length=60, label="Permanent Address"),
         Field('phone'),
-        Field('entry'),
+        Field('entry', label="Entry Number"),
         Field('department'),
         Field('hostel'),
 ]
