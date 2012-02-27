@@ -14,6 +14,13 @@ response.generic_patterns = ['*'] if request.is_local else []
 from gluon.tools import Auth
 auth = Auth(db, hmac_key=Auth.get_or_create_key())
 
+auth.settings.extra_fields['auth_user']= [
+        Field('address'),
+        Field('phone'),
+        Field('entry'),
+        Field('department'),
+        Field('hostel'),
+]
 
 ## create all tables needed by auth if not custom tables
 auth.define_tables()
