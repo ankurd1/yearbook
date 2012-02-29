@@ -1,0 +1,7 @@
+# web2py specific ignores
+cache/*
+databases/*
+errors/*
+sessions/*
+uploads/*
+private/*
